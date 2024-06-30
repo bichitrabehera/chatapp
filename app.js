@@ -32,8 +32,8 @@ let messageSender = 'bichi';
 
 const updateMessageSender = (name) => {
   messageSender = name;
-  chatHeader.innerText = `${messageSender} chatting...;`
-  chatInput.placeholder = `Type here, ${messageSender}...;`
+  chatHeader.innerText = `${messageSender} chatting...`;
+  chatInput.placeholder = `Type here, ${messageSender}...`;
 
   johnSelectorBtn.classList.toggle('active-person', name === 'bichi');
   janeSelectorBtn.classList.toggle('active-person', name === 'abhi');
@@ -55,7 +55,7 @@ const sendMessage = (e) => {
     timestamp,
   };
 
-  /* Save message to local storage */
+  /* Add message to local storage */
   messages.push(message);
   localStorage.setItem('messages', JSON.stringify(messages));
 
